@@ -4,10 +4,10 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/apiBookstore-front'));
+app.use(express.static('./docs'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/apiBookstore-front/'}),
+    res.sendFile('index.html', {root: 'docs/'}),
 );
 
 // Start the app by listening on the default Heroku port
